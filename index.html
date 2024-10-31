@@ -18,14 +18,16 @@
   </head>
   <body>
     <header class="[ ] [ bg-clr-black padding-s ] [ ]">
-      <div class="[ ] [ flex-row justify-space_between wrapper ] [ ]">
+      <div
+        class="[ flex-row_nav ] [ align-center justify-space_between wrapper ] [ ]"
+      >
         <img
           class="[ ] [ ] [ img-kiwi ]"
           src="images/00-nav-kiwi-flag.svg"
           alt="A kiwi bird with the New Zealand flag inside"
         />
         <nav>
-          <ul class="[ flex-row ] [ style-none padding-zero ] [ ]">
+          <ul class="[ flex-row_nav ] [ gap-xs style-none padding-zero ] [ ]">
             <li>
               <a class="[ ] [ ] [ link ]" href="index.html">Home</a>
             </li>
@@ -54,45 +56,58 @@
         />
       </section>
       <section class="[ ] [ wrapper ] [ ]">
-        <!-- spell-checker: disable -->
-        <p>
-          New Zealand (Māori: Aotearoa [aɔˈtɛaɾɔa]) is an island country in the
-          southwestern Pacific Ocean. It consists of two main landmasses—the
-          North Island (Te Ika-a-Māui) and the South Island (Te Waipounamu)—and
-          over 700 smaller islands. It is the sixth-largest island country by
-          area and lies east of Australia across the Tasman Sea and south of the
-          islands of New Caledonia, Fiji, and Tonga. The country's varied
-          topography and sharp mountain peaks, including the Southern Alps, owe
-          much to tectonic uplift and volcanic eruptions. New Zealand's capital
-          city is Wellington, and its most populous city is Auckland.
-        </p>
-        <img src="images/01-new-zealand-Islands.svg" alt="" />
-        <p>
-          The islands of New Zealand were the last large habitable land to be
-          settled by humans. Between about 1280 and 1350, Polynesians began to
-          settle in the islands and then subsequently developed a distinctive
-          Māori culture. In 1642, the Dutch explorer Abel Tasman became the
-          first European to sight and record New Zealand. In 1769 the British
-          explorer Captain James Cook became the first European to set foot on
-          and map New Zealand. In 1840, representatives of the United Kingdom
-          and Māori chiefs signed the Treaty of Waitangi which paved the way for
-          Britain's declaration of sovereignty later that year and the
-          establishment of the Crown Colony of New Zealand in 1841.
-          Subsequently, a series of conflicts between the colonial government
-          and Māori tribes resulted in the alienation and confiscation of large
-          amounts of Māori land. New Zealand became a dominion in 1907; it
-          gained full statutory independence in 1947, retaining the monarch as
-          head of state. Today, the majority of New Zealand's population of 5.25
-          million is of European descent; the indigenous Māori are the largest
-          minority, followed by Asians and Pasifika. Reflecting this, New
-          Zealand's culture is mainly derived from Māori and early British
-          settlers, with recent broadening of culture arising from increased
-          immigration to the country. The official languages are English, Māori,
-          and New Zealand Sign Language, with the local dialect of English being
-          dominant.
-        </p>
-        <!-- spell-checker: enable -->
-        <video src="images/01-beach.mp4"></video>
+        <article>
+          <!-- spell-checker: disable -->
+          <h2 class="[ ] [ wrapper padding-s ] [ ]">About</h2>
+          <div class="[ flex-row_main ] [ gap-m ] [ ]">
+            <p>
+              New Zealand (Māori: Aotearoa [aɔˈtɛaɾɔa]) is an island country in
+              the southwestern Pacific Ocean. It consists of two main
+              landmasses—the North Island (Te Ika-a-Māui) and the South Island
+              (Te Waipounamu)—and over 700 smaller islands. It is the
+              sixth-largest island country by area and lies east of Australia
+              across the Tasman Sea and south of the islands of New Caledonia,
+              Fiji, and Tonga. The country's varied topography and sharp
+              mountain peaks, including the Southern Alps, owe much to tectonic
+              uplift and volcanic eruptions. New Zealand's capital city is
+              Wellington, and its most populous city is Auckland.
+            </p>
+            <video controls autoplay loop muted class="[ ] [ ] [ video-beach ]">
+              <source src="images/01-beach.mp4" type="video/mp4" />
+            </video>
+
+            <p class="[ flex-row_item-4 ] [ ] [ ]">
+              The islands of New Zealand were the last large habitable land to
+              be settled by humans. Between about 1280 and 1350, Polynesians
+              began to settle in the islands and then subsequently developed a
+              distinctive Māori culture. In 1642, the Dutch explorer Abel Tasman
+              became the first European to sight and record New Zealand. In 1769
+              the British explorer Captain James Cook became the first European
+              to set foot on and map New Zealand. In 1840, representatives of
+              the United Kingdom and Māori chiefs signed the Treaty of Waitangi
+              which paved the way for Britain's declaration of sovereignty later
+              that year and the establishment of the Crown Colony of New Zealand
+              in 1841. Subsequently, a series of conflicts between the colonial
+              government and Māori tribes resulted in the alienation and
+              confiscation of large amounts of Māori land. New Zealand became a
+              dominion in 1907; it gained full statutory independence in 1947,
+              retaining the monarch as head of state. Today, the majority of New
+              Zealand's population of 5.25 million is of European descent; the
+              indigenous Māori are the largest minority, followed by Asians and
+              Pasifika. Reflecting this, New Zealand's culture is mainly derived
+              from Māori and early British settlers, with recent broadening of
+              culture arising from increased immigration to the country. The
+              official languages are English, Māori, and New Zealand Sign
+              Language, with the local dialect of English being dominant.
+            </p>
+            <!-- spell-checker: enable -->
+            <img
+              class="[ ] [ ] [ img-island ]"
+              src="images/01-new-zealand-Islands.svg"
+              alt="outline of New Zealand filled in with blue"
+            />
+          </div>
+        </article>
       </section>
     </main>
     <footer class="[ ] [ wrapper ] [ ]">
