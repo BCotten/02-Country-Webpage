@@ -36,9 +36,12 @@
 
   /* Colors Primary */
 
-  --clr-cool-gray: #8895b3ff;
-  --clr-mauve: #bbadffff;
-  --clr-mauve-2: #dab6fcff;
+  --clr-primary-blue-300: #0145db;
+  --clr-primary-blue-400: #012d8f;
+  --clr-primary-blue-500: #012169;
+  --clr-secondary-red-300: #ff141a;
+  --clr-secondary-red-400: #ee1336;
+  --clr-secondary-red-500: #c8102e;
 
   /* Colors neutral */
 
@@ -52,9 +55,10 @@
 
 /* Global CSS */
 
-html {
+body {
   font-family: var(--fs-base);
   font-size: var(--step-0);
+  margin: 0;
 }
 
 h1,
@@ -82,19 +86,80 @@ h3 {
 p {
   padding-inline: var(--space-s);
   max-width: 75ch;
+  line-height: 1.5;
 }
 
 /*
   ---- Composition ----
 */
 
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs, 1rem);
+}
+
+.flex-row > li {
+  flex: 1 1 auto;
+}
+
 /*
   ---- Utilities ----
 */
 
+.bg-clr-black {
+  background-color: var(--clr-neutral-900);
+}
+
+.justify-space_between {
+  justify-content: space-between;
+}
+
+.justify-space_evenly {
+  justify-content: space-evenly;
+}
+
+.style-none {
+  list-style-type: none;
+}
+
+.padding-zero {
+  padding: 0;
+}
+
+.padding-s {
+  padding: var(--space-s);
+}
+
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: clamp(min(65rem, 100vw), 20vw + 60rem, 150rem);
+}
+
 /*
   ---- Block ----
 */
+
+.link {
+  font-family: var(--ff-secondary);
+  font-size: var(--step-1);
+  color: var(--clr-neutral-100);
+  border: var(--space-3xs, 0.25rem) solid var(--clr-primary-blue-500);
+  border-radius: var(--space-xs, 1rem);
+  text-decoration: none;
+  padding: var(--space-3xs, 0.3rem);
+}
+
+.link:hover {
+  color: var(--clr-secondary-red-500);
+  border: var(--space-3xs, 0.25rem) solid var(--clr-secondary-red-500);
+  border-radius: var(--space-xs, 1rem);
+}
+
+.img-kiwi {
+  width: clamp(4.5rem, 4vw + 4rem, 8rem);
+}
 
 /*
   ---- Exception ----
