@@ -3,7 +3,7 @@
 :root {
   /* Font families */
   --ff-base: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  --ff-secondary: "Permanent Marker", cursive;
+  --ff-secondary: "Fascinate Inline", system-ui;
 
   /* Font Sizes */
   --step--2: clamp(0.6944rem, 0.6577rem + 0.1836vw, 0.8rem);
@@ -183,6 +183,14 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.footer {
+  color: var(--clr-neutral-100);
+  text-align: center;
+  padding: var(--space-m);
+  margin-top: var(--space-m);
+  font-size: var(--step--2);
 }
 
 .link {
