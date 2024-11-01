@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -12,22 +18,22 @@
       content="Country Page New Zealand"
     />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
     <title>References</title>
   </head>
   <body>
     <header class="[ ] [ bg-clr-black padding-s ] [ ]">
-      <div class="[ ] [ flex-row justify-space_between wrapper ] [ ]">
+      <div
+        class="[ flex-row_nav ] [ align-center justify-space_between wrapper ] [ ]"
+      >
         <img
           class="[ ] [ ] [ img-kiwi ]"
           src="images/00-nav-kiwi-flag.svg"
           alt="A kiwi bird with the New Zealand flag inside"
         />
         <nav>
-          <ul
-            class="[ flex-row ] [ style-none padding-zero ] [ ]"
-          >
+          <ul class="[ flex-row_nav ] [ gap-xs style-none padding-zero ] [ ]">
             <li>
               <a class="[ ] [ ] [ link ]" href="index.html">Home</a>
             </li>
@@ -54,6 +60,10 @@
         <h2>Contact</h2>
       </section>
     </main>
-    <footer><p>© Brandon Cotten For Educational Purposes</p></footer>
+    <footer class="[ ] [ bg-clr-black ] [ ]">
+      <div>
+        <p class="[ ] [ wrapper footer ] [ ]">© Brandon Cotten For Educational Purposes</p>
+      </div>
+    </footer>
   </body>
 </html>
