@@ -35,7 +35,7 @@
   --fw-1000: 1000;
 
   /* Colors Primary */
-
+  --clr-primary-blue-100: #AEC6FE;
   --clr-primary-blue-300: #0145db;
   --clr-primary-blue-500: #012169;
 
@@ -183,6 +183,10 @@ p {
   color: var(--clr-neutral-100);
 }
 
+.text-align_left {
+  text-align: left;
+}
+
 .padding-s {
   padding: var(--space-s, 1.1rem);
 }
@@ -272,6 +276,40 @@ p {
   padding: var(--space-s, 1rem);
   border-radius: 45%;
 }
+
+/* table styles  */
+
+.table {
+  overflow-x: auto;
+  margin: 0 auto;
+  border: var(--space-2xs, 0.25rem) solid var(--clr-primary-blue-500);
+  box-shadow: var(--space-xs, 0.75) var(--space-xs, 0.75rem)
+    var(--clr-primary-blue-300);
+}
+
+.table th {
+  font-size: var(--step-1, 1.35rem);
+  font-family: var(--ff-secondary);
+}
+
+.table td,
+.table th {
+  padding: var(--space-2xs);
+}
+
+.tbody tr:nth-child(even) {
+  background-color: var(--clr-primary-blue-500);
+  color: var(--clr-neutral-100);
+}
+
+.tbody tr:nth-child(odd) {
+  background-color: var(--clr-primary-blue-100);
+}
+
+.tbody a {
+  text-decoration: none;
+}
+
 
 /*
   ---- Exception ----
