@@ -97,6 +97,17 @@ p {
   ---- Composition ----
 */
 
+.grid {
+  display: grid;
+  gap: var(--space-xl, 3.5rem);
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .flex-row_nav {
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +122,13 @@ p {
   flex: 1 1 100%;
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 30rem) {
+  .grid-300 {
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  }
+}
+
+@media (min-width: 50em) {
   .flex-row_main > * {
     flex: 1 1 calc(50% - var(--space-m, 1.6rem));
   }
@@ -141,12 +158,25 @@ p {
   gap: var(--space-m, 1.6rem);
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.flex-50 {
+  flex: 1 1 auto;
+  object-fit: cover;
+}
+
 .justify-space_between {
   justify-content: space-between;
 }
 
 .justify-space_evenly {
   justify-content: space-evenly;
+}
+
+.justify-space_center {
+  justify-content: center;
 }
 
 .style-none {
@@ -157,12 +187,20 @@ p {
   color: var(--clr-neutral-100);
 }
 
-.padding-zero {
-  padding: 0;
+.padding-s {
+  padding: var(--space-s, 1.1rem);
 }
 
-.padding-s {
-  padding: var(--space-s);
+.padding-bottom-s {
+  padding: var(--space-s, 1.1rem);
+}
+
+.padding-inline-s {
+  padding-inline: var(--space-s, 1.1rem);
+}
+
+.padding-zero {
+  padding: 0;
 }
 
 .width-50 {
@@ -199,6 +237,12 @@ p {
   margin: 0 auto;
   width: 55ch;
   padding-top: var(--space-l);
+}
+
+.card > li {
+  border: var(--space-2xs, 0.25rem) solid var(--clr-primary-blue-500);
+  box-shadow: var(--space-xs, 0.75) var(--space-xs, 0.75rem)
+    var(--clr-primary-blue-300);
 }
 
 .footer {
