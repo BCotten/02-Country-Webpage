@@ -12,7 +12,7 @@
   --step-1: clamp(1.2rem, 1.0739rem + 0.6304vw, 1.5625rem);
   --step-2: clamp(1.44rem, 1.2615rem + 0.8924vw, 1.9531rem);
   --step-3: clamp(1.728rem, 1.4799rem + 1.2407vw, 2.4414rem);
-  --step-4: clamp(2.0736rem, 1.7334rem + 1.7011vw, 3.0518rem);
+  --step-4: clamp(2.0736rem, 1.7334rem + 1.7011vw, 2.8rem);
   --step-5: clamp(2.4883rem, 2.027rem + 2.3067vw, 3.8147rem);
 
   /* spacing */
@@ -37,11 +37,7 @@
   /* Colors Primary */
 
   --clr-primary-blue-300: #0145db;
-  --clr-primary-blue-400: #012d8f;
   --clr-primary-blue-500: #012169;
-  --clr-secondary-red-300: #ff141a;
-  --clr-secondary-red-400: #ee1336;
-  --clr-secondary-red-500: #c8102e;
 
   /* Colors neutral */
 
