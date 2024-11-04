@@ -118,7 +118,7 @@ p {
   flex: 1 1 100%;
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 30em) {
   .grid-300 {
     grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
   }
