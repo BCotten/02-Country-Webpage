@@ -35,7 +35,7 @@
   --fw-1000: 1000;
 
   /* Colors Primary */
-  --clr-primary-blue-100: #AEC6FE;
+  --clr-primary-blue-100: #aec6fe;
   --clr-primary-blue-300: #0145db;
   --clr-primary-blue-500: #012169;
 
@@ -253,6 +253,8 @@ p {
   font-size: var(--step--2);
 }
 
+/* Don’t forget to add focus styles for clickable elements; I couldn’t see any in the CSS. This greatly enhances accessibility. I won’t deduct marks for this now, but please remember it for future projects. I’ll be a bit more strict about accessibility for the country website. */
+
 .link {
   font-family: var(--ff-secondary);
   font-size: var(--step-1);
@@ -309,7 +311,6 @@ p {
 .tbody a {
   text-decoration: none;
 }
-
 
 /*
   ---- Exception ----
