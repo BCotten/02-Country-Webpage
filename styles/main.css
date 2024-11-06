@@ -155,6 +155,10 @@ p {
   gap: var(--space-m, 1.6rem);
 }
 
+.font-secondary {
+  font-family: var(--ff-secondary);
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -258,8 +262,6 @@ p {
   font-size: var(--step--2);
 }
 
-/* Don’t forget to add focus styles for clickable elements; I couldn’t see any in the CSS. This greatly enhances accessibility. I won’t deduct marks for this now, but please remember it for future projects. I’ll be a bit more strict about accessibility for the country website. */
-
 .link {
   font-family: var(--ff-secondary);
   font-size: var(--step-1);
@@ -271,14 +273,17 @@ p {
   padding: var(--space-3xs, 0.3rem);
 }
 
+.link:hover,
+.link:focus {
+  border-radius: var(--space-xs, 1rem);
+}
+
 .link:hover {
   border: var(--space-3xs, 0.25rem) solid var(--clr-primary-blue-300);
-  border-radius: var(--space-xs, 1rem);
 }
 
 .link:focus {
   border: var(--space-3xs, 0.25rem) solid var(--clr-neutral-100);
-  border-radius: var(--space-xs, 1rem);
 }
 
 .img-kiwi {
@@ -293,8 +298,6 @@ p {
 .table {
   margin-left: 1rem;
   border: var(--space-2xs, 0.25rem) solid var(--clr-primary-blue-500);
-  box-shadow: var(--space-xs, 0.75) var(--space-xs, 0.75rem)
-    var(--clr-primary-blue-300);
 }
 
 th[scope="col"],
@@ -303,11 +306,10 @@ th[scope="row"] {
   color: var(--clr-neutral-100);
 }
 
-/* .scroll-bar {
-  overflow-x: auto;
+.scroll-bar {
+  overflow-x: scroll;
   scroll-behavior: smooth;
 }
-*/
 
 .table th {
   font-size: var(--step-1, 1.35rem);
@@ -317,6 +319,7 @@ th[scope="row"] {
 .table td,
 .table th {
   padding: var(--space-2xs);
+  white-space: nowrap;
 }
 
 .tbody tr:nth-child(even) {
@@ -330,6 +333,7 @@ th[scope="row"] {
 
 .link-container {
   position: relative;
+  min-width: 8rem;
 }
 
 .table-link {
@@ -345,11 +349,7 @@ th[scope="row"] {
   padding: var(--space-2xs);
 }
 
-.table-link:hover {
-  background-color: var(--clr-neutral-900);
-  color: var(--clr-primary-blue-200);
-}
-
+.table-link:hover,
 .table-link:focus {
   background-color: var(--clr-neutral-900);
   color: var(--clr-primary-blue-200);
@@ -359,11 +359,60 @@ th[scope="row"] {
   color: inherit;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 50em) {
   .table {
     margin: 0 auto;
+    box-shadow: var(--space-xs, 0.75) var(--space-xs, 0.75rem)
+      var(--clr-primary-blue-300);
+  }
+
+  .scroll-bar {
+    overflow-x: visible;
   }
 }
+
+/* Contact Form styles */
+
+.form {
+  max-width: 20rem;
+  gap: var(--space-3xs);
+}
+
+.input {
+  border: var(--space-3xs, 0.55rem) solid var(--clr-primary-blue-500);
+}
+
+.input:focus {
+  box-shadow: var(--space-3xs, 0.27rem) var(--space-3xs, 0.27rem)
+    var(--clr-primary-blue-300);
+}
+
+.button {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-850);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: var(--space-3xs, 0.27rem);
+  padding: var(--space-3xs, 0.27rem);
+  border: var(--space-2xs, 0.55) solid transparent;
+  font-family: var(--ff-secondary);
+  background: var(--clr-primary-blue-500);
+  box-shadow: var(--space-xs, 0.75) var(--space-xs, 0.75rem)
+    var(--clr-primary-blue-300);
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  box-shadow: var(--space-3xs, 0.27rem) var(--space-3xs, 0.27rem)
+    var(--clr-primary-blue-300);
+}
+
+.button:focus {
+  border: var(--space-2xs, 0.55rem) solid var(--clr-neutral-100);
+}
+
+
 
 /*
   ---- Exception ----
