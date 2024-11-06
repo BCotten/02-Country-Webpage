@@ -403,7 +403,7 @@ th[scope="row"] {
   transition: all 0.3s ease;
   margin-top: var(--space-3xs, 0.27rem);
   padding: var(--space-3xs, 0.27rem);
-  border: var(--space-2xs, 0.55) solid transparent;
+  border: var(--space-2xs, 0.55) 0 solid transparent;
   font-family: var(--ff-secondary);
   background: var(--clr-primary-blue-500);
   box-shadow: var(--space-xs, 0.75) var(--space-xs, 0.75rem)
@@ -420,8 +420,6 @@ th[scope="row"] {
 .button:focus {
   border: var(--space-2xs, 0.55rem) solid var(--clr-neutral-100);
 }
-
-
 
 /*
   ---- Exception ----
