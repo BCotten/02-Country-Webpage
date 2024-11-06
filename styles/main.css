@@ -36,6 +36,7 @@
 
   /* Colors Primary */
   --clr-primary-blue-100: #aec6fe;
+  --clr-primary-blue-200: #5169e6;
   --clr-primary-blue-300: #0145db;
   --clr-primary-blue-500: #012169;
 
@@ -179,6 +180,10 @@ p {
   list-style-type: none;
 }
 
+.text-clr-black {
+  color: var(--clr-neutral-900);
+}
+
 .text-clr-white {
   color: var(--clr-neutral-100);
 }
@@ -259,7 +264,7 @@ p {
   font-family: var(--ff-secondary);
   font-size: var(--step-1);
   font-weight: var(--fw-700);
-  color: var(--clr-neutral-100);
+  color: var(--clr-primary-blue-200);
   border: var(--space-3xs, 0.25rem) solid var(--clr-primary-blue-500);
   border-radius: var(--space-xs, 1rem);
   text-decoration: none;
@@ -267,8 +272,12 @@ p {
 }
 
 .link:hover {
-  color: var(--clr-primary-blue-300);
   border: var(--space-3xs, 0.25rem) solid var(--clr-primary-blue-300);
+  border-radius: var(--space-xs, 1rem);
+}
+
+.link:focus {
+  border: var(--space-3xs, 0.25rem) solid var(--clr-neutral-100);
   border-radius: var(--space-xs, 1rem);
 }
 
@@ -282,12 +291,23 @@ p {
 /* table styles  */
 
 .table {
-  overflow-x: auto;
-  margin: 0 auto;
+  margin-left: 1rem;
   border: var(--space-2xs, 0.25rem) solid var(--clr-primary-blue-500);
   box-shadow: var(--space-xs, 0.75) var(--space-xs, 0.75rem)
     var(--clr-primary-blue-300);
 }
+
+th[scope="col"],
+th[scope="row"] {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+}
+
+/* .scroll-bar {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+*/
 
 .table th {
   font-size: var(--step-1, 1.35rem);
@@ -308,8 +328,41 @@ p {
   background-color: var(--clr-primary-blue-100);
 }
 
-.tbody a {
+.link-container {
+  position: relative;
+}
+
+.table-link {
   text-decoration: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: var(--space-2xs);
+}
+
+.table-link:hover {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary-blue-200);
+}
+
+.table-link:focus {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary-blue-200);
+}
+
+.table-link:visited {
+  color: inherit;
+}
+
+@media (min-width: 30em) {
+  .table {
+    margin: 0 auto;
+  }
 }
 
 /*
